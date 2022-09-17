@@ -98,6 +98,7 @@ export const TabbedHeaderPager = React.forwardRef<ScrollView, TabbedHeaderPagerP
         <View style={commonStyles.container}>
           <StickyHeaderScrollView
             ref={scrollViewRef}
+            renderHeader={renderHeader}
             {...rest}
             contentContainerStyle={contentContainerStyle}
             decelerationRate={decelerationRate}
@@ -106,7 +107,6 @@ export const TabbedHeaderPager = React.forwardRef<ScrollView, TabbedHeaderPagerP
             onScrollEndDrag={onScrollEndDrag}
             onScroll={onScroll}
             overScrollMode={overScrollMode}
-            renderHeader={renderHeader}
             renderTabs={renderTabs}
             scrollEventThrottle={scrollEventThrottle}>
             <Pager
